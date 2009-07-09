@@ -1,0 +1,37 @@
+---
+title:  Home
+extension: html
+dirty:  true
+filter:
+  - haml
+---
+
+.hfeed.column.span-15.first.last
+  - recent_pages =  @pages.find(:all, :in_directory => @page.dir, :recursive => true, :sort_by => "created_at", :reverse => true){|p| p.path !~ /\/index\.txt$/}
+  - page = recent_pages.shift # remove first page for special treatment
+  - render(page) unless page.excerpt
+  .latest.section
+    .hentry.entry
+      .title-summary
+        %h2.entry-title
+          %a{:href => page.url}= page.title
+        %p.entry-summary= page.summary        
+      .post-info
+        %abbr.published{:title => page.created_at.to_s}== Posted #{page.created_at.strftime('%B %d, %Y')}
+      - if page.excerpt
+        .entry-content= RedCloth.new(page.excerpt).to_html
+      %p.read-more
+        %a{:href => page.url} Read More&hellip;
+  - unless recent_pages.empty?
+    #recent.post-list.section
+      %h2.recent Recently
+      - recent_pages.group_by{|p| p.created_at.strftime('%B<strong>%y</strong>').upcase}.each do |month, pages|
+        .group
+          %h3.month
+            %span= month
+          - pages.each do |page|
+            .title-summary
+              %h4.entry-title
+                %a{:href => page.url}= page.title   
+              %p.entry-summary= page.summary
+      %a.extra-quiet.plain.top-link{:href => '#header'} [top]
