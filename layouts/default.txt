@@ -1,0 +1,35 @@
+---
+extension: html
+filter:    erb
+filter:    haml
+---
+!!! Strict
+%html
+  %head
+    %meta{'http-equiv' => "content-type", :content => "text/html charset=utf-8"}
+    %title 
+      india . rickbradley . com
+      = @page.title ? " - #{@page.title}" : ''
+    %script{ :src => '/javascript/jquery.js', :type => 'text/javascript' }
+    %link{:rel => "stylesheet", :href => "/css/blueprint/screen.css", :type => 'text/css', :media => "screen, projection"}
+    %link{:rel => "stylesheet", :href => "/css/blueprint/print.css", :type => 'text/css', :media => "print"}
+    %link{:rel => "stylesheet", :href => "/css/coderay.css", :type => 'text/css'}
+    %link{:rel => "stylesheet", :href => "/css/site.css", :type => 'text/css', :media => "screen, projection"}
+    %link{:rel => "alternate", :href => "http://india.rickbradley.com/feed/atom.xml", :type => 'application/atom+xml', :title => "RSS feed"}
+  %body
+    .container
+      .column.span-22.prepend-0.append-2.first.last#header
+        %p.title 
+          %a{:href => '/'} india.rickbradley.com
+          \- our trip to India
+        %p
+          %a{:href => '/blog/archive/'} blog archive
+          %a{:href => 'http://www.rickbradley.com/'} visit rickbradley.com
+        %hr
+        = @content
+      .column.span-22.prepend-0.append-2.first.last
+        %hr
+      .column.span-7.prepend-17.first.last#footer
+        %p.small.last
+          This website was created with
+          %a{:href => 'http://webby.rubyforge.org'} Webby
