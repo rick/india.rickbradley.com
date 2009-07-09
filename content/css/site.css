@@ -62,6 +62,19 @@ p.title {
   margin-bottom: 0.75em;
 }
 
-#header p.title { font-size: 3em; line-height: 1; margin-bottom: 0.5em; }
+#header p.title { 
+	font-size: 2em; 
+	line-height: 1;
+  margin-bottom: 0.5em; 
+	text-decoration: none;
+}
+
+#header p.title a {
+	text-decoration: none;
+}
+
+li {
+  list-style-type: square;
+}
 
 /* EOF */
