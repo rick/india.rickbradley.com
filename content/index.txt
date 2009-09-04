@@ -20,6 +20,7 @@ filter:
         %abbr.published{:title => page.created_at.to_s}== Posted #{page.created_at.strftime('%B %d, %Y')}
       - if page.excerpt
         .entry-content= RedCloth.new(page.excerpt).to_html
+      .entry-content= render(page)
       %p.read-more
         %a{:href => page.url} Read More&hellip;
   - unless recent_pages.empty?
@@ -34,4 +35,5 @@ filter:
               %h4.entry-title
                 %a{:href => page.url}= page.title   
               %p.entry-summary= page.summary
+              .entry-content= render(page)
       %a.extra-quiet.plain.top-link{:href => '#header'} [top]
