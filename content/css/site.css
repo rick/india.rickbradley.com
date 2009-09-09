@@ -77,4 +77,8 @@ li {
   list-style-type: square;
 }
 
+img {
+  border: 1px solid black;
+}
+
 /* EOF */
