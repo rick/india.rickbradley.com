@@ -1,0 +1,13 @@
+--- 
+title:      First Batch of Photos Available
+created_at: 2009-09-17 12:43:43.077344 +05:30
+blog_post:  true
+filter:
+  - textile
+--- 
+
+We were able to get the internets to finally do our bidding and I've put up a batch of photos.  No real descriptions on them yet, but, hey, they're there :-)
+
+<img src="http://farm3.static.flickr.com/2590/3927493287_3c791f59ce.jpg">
+
+You can find them on flickr <a href="http://www.flickr.com/photos/rickbradley/sets/72157622393701396/">here</a>.  We'll keep putting our pictures at that link, so check back in the future.
