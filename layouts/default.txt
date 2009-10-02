@@ -11,6 +11,11 @@ filter:    haml
       india . rickbradley . com
       = @page.title ? " - #{@page.title}" : ''
     %script{ :src => '/javascript/jquery.js', :type => 'text/javascript' }
+    %script{ :src => '/javascript/jquery.timeago.js', :type => 'text/javascript' }
+    %script{ :src => '/javascript/jquery.jclock-1.2.0.js', :type => 'text/javascript' }
+    %script{ :src => '/javascript/date_function.js', :type => 'text/javascript' }
+    %script{ :src => '/javascript/flickr-feed.js', :type => 'text/javascript' }
+    %script{ :src => '/javascript/current-time.js', :type => 'text/javascript' }
     %link{:rel => "stylesheet", :href => "/css/blueprint/screen.css", :type => 'text/css', :media => "screen, projection"}
     %link{:rel => "stylesheet", :href => "/css/blueprint/print.css", :type => 'text/css', :media => "print"}
     %link{:rel => "stylesheet", :href => "/css/coderay.css", :type => 'text/css'}
@@ -22,9 +27,28 @@ filter:    haml
         %p.title 
           %a{:href => '/'} india.rickbradley.com
           \- our trip to India
-        %p
-          %a{:href => '/blog/archive/'} blog archive
-          %a{:href => 'http://www.rickbradley.com/'} visit rickbradley.com
+        %ul
+          %li
+            The time in India is now:
+            %span#india-time
+          %li
+            #flickr
+              Contacting Flickr for photo info...
+            #flickr-loaded{:style => 'display: none;'}
+              There are
+              %span#flickr-count
+                some
+              of our India photos now online!  Photos last uploaded 
+              %span#flickr-when
+                some time ago
+              \...
+              %span
+                %a{ :href => 'http://www.flickr.com/photos/rickbradley/sets/72157622393701396/'}
+                  Go look!
+          %li
+            %a{:href => '/blog/archive/'} blog archive
+          %li
+            %a{:href => 'http://www.rickbradley.com/'} visit rickbradley.com
         %hr
         = @content
       .column.span-22.prepend-0.append-2.first.last
