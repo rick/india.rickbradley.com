@@ -13,7 +13,9 @@ dirty:      true
   paginate(articles, 10) do |page|
 -%>
 <div class="article">
-  <h1><%= link_to_page(page) %><span class="date">(<%= page.created_at.strftime('%Y-%m-%d') %>)</span></h1>
+<h1><%= link_to_page(page) %>
+  <span class="comment-count"><%= link_to_page(page, :title => '...', :url => {:anchor => 'disqus_thread'}) %></span>
+  <span class="date">(<%= page.created_at.strftime('%Y-%m-%d') %>)</span></h1>
 
   <div class="body">
     <%= render(page) %>

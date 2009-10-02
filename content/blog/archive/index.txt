@@ -16,6 +16,7 @@ dirty:      true
         - pages.each do |page|
           .title-summary
             %h4.entry-title
-              %a{:href => page.url}= page.title   
+              %a{:href => page.url }= page.title   
+              %a{:href => page.url + '#disqus_thread' } no comments
             %p.entry-summary= page.summary
             %p.entry-summary= render(page)
