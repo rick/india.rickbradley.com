@@ -59,6 +59,9 @@ filter:    haml
             %param{ :name => "bgcolor", :value => "#ffffff" }
             %param{ :name => "FlashVars", :value => "xmlurl=/pflog/india.xml" }
             %embed{ :name => "pflog", :bgcolor => "#ffffff", :src => "/pflog/pflog.swf", :type => "application/x-shockwave-flash", :pluginspage => "http://www.macromedia.com/go/getflashplayer", :FlashVars => "xmlurl=/pflog/india.xml", :allowScriptAccess => "sameDomain", :height => "266", :quality => "high", :align => "middle", :width => "500" }
+        %p{:style => 'text-align: right'}
+          map software by
+          %a{:href=>'http://old.fawx.com/software/pflog/'} pflog
         %hr
         = @content
         - unless @page.name =~ /index$/
