@@ -1,0 +1,116 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<title>pflog instructions</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+body { font: 12px/19px "lucida grande", "lucida sans unicode", verdana, sans-serif; background: #fff;}
+
+a:link {color: #848484; text-decoration: none;}
+a:visited {color: #848484; text-decoration: none;}
+a:hover {color: #fff; background-color: #A30700; text-decoration: none;}
+
+h1 { font-size: 200%; font-weight: bold; color: #A30700; }
+h2 { font-size: 105%; color: #930; padding: 0; margin: 0; }
+h3 { font-size: 100%; font-weight: bold; color: #848484; border-bottom: 1px solid #eee; }
+
+/* code */
+.code { background-color: #ddd; display: block;}
+</style>
+</head>
+<body>
+
+		<h1>how to pflog</h1>
+		<h3>DO NOT EAT PACKAGE</h3>
+		<p />Adding <a href="/software/pflog/">pflog</a> to your web site takes three steps:
+		<ul>
+			<li>Upload <code>pflog.swf</code> to your web site.</li>
+			<li>Upload an XML document that defines the locations to plot.
+			<li>In your web page's HTML, paste example code (shown below) to load pflog.</li>
+		</ul>
+		<h3>HTML CODE</h3>
+<p /><code class="code">&lt;object classid=&quot;clsid:d27cdb6e-ae6d-11cf-96b8-444553540000&quot; 
+codebase=&quot;http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,0,0&quot; 
+width=&quot;500&quot; height=&quot;266&quot; id=&quot;pflog&quot; align=&quot;middle&quot;&gt;<br>
+&lt;param name=&quot;allowScriptAccess&quot; value=&quot;sameDomain&quot; /&gt;<br>
+&lt;param name=&quot;movie&quot; value=&quot;<span style="color: #ff0000"><strong>http://www.yourwebsite.com/path/to/pflog.swf</strong></span>&quot; /&gt;<br>
+&lt;param name=&quot;quality&quot; value=&quot;high&quot; /&gt;<br>
+&lt;param name=&quot;bgcolor&quot; value=&quot;#ffffff&quot; /&gt;<br>
+&lt;param name=&quot;FlashVars&quot; value=&quot;<span style="color: #ff0000"><strong>/path/to/yourmap.xml</strong></span>&quot; 
+/&gt;<br>
+&lt;embed src=&quot;<span style="color: #ff0000"><strong>http://www.yourwebsite.com/path/to/pflog.swf</strong></span>&quot; quality=&quot;high&quot; bgcolor=&quot;#ffffff&quot; 
+FlashVars=&quot;<span style="color: #ff0000"><strong>xmlurl=/path/to/yourmap.xml</strong></span>&quot; 
+width=&quot;500&quot; height=&quot;266&quot; name=&quot;pflog&quot; align=&quot;middle&quot; allowScriptAccess=&quot;sameDomain&quot; 
+type=&quot;application/x-shockwave-flash&quot; pluginspage=&quot;http://www.macromedia.com/go/getflashplayer&quot; 
+/&gt;<br>
+&lt;/object&gt;</code>
+		<p />Be sure to edit the HTML code you paste to point to <em>your</em> copy of pflog and
+		<em>your</em> XML locations document, as shown in the red highlighted areas above.
+		<h3>XML DOCUMENT</h3>
+		<p />The basic structure of a pflog <code>&lt;map&gt;</code> document might look something like this:
+<p /><code class="code">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;<br>
+&lt;map&gt;<br>
+&nbsp; &lt;settings&gt;<br>
+&nbsp;&nbsp;&nbsp; [...]<br>
+&nbsp; &lt;/settings&gt;<br>
+&nbsp;
+&lt;routes&gt;<br>
+&nbsp;&nbsp;&nbsp;
+&lt;route&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;name&gt;Eurasia&lt;/name&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;latitude&gt;42N&lt;/latitude&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;longitude&gt;10E&lt;/longitude&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;zoom&gt;5&lt;/zoom&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;locations&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;location&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;name&gt;London, England&lt;/name&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;arrivaldate&gt;1872-10-2&lt;/arrivaldate&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;latitude&gt;51.500N&lt;/latitude&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;longitude&gt;0.116W&lt;/longitude&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;note&gt;Fogg accepts a wager for 20,000 pounds to travel around the world in 80 
+days.&lt;/note&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;url&gt;http://en.wikipedia.org/wiki/London&lt;/url&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;/location&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [...]<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;/locations&gt;<br>
+&nbsp;&nbsp;&nbsp;
+&lt;/route&gt;<br>
+&nbsp;&nbsp;&nbsp; [...]<br>
+&nbsp; &lt;/routes&gt;<br>
+&lt;/map&gt;</code>
+		<p />A <code>&lt;map&gt;</code> document contains <code>&lt;settings&gt;</code> that
+		tell pflog how to format its display, and <code>&lt;routes&gt;</code> for pflog
+		to draw.  Each <code>&lt;route&gt;</code> in <code>&lt;routes&gt;</code> has coordinates
+		and a <code>&lt;zoom&gt;</code> magnification that tell pflog how to zoom in to portray
+		that route.  Finally, a <code>&lt;route&gt;</code> has <code>&lt;locations&gt;</code>
+		that pflog charts out on the map.  Each <code>&lt;location&gt;</code> has a series
+		of tags that pflog uses to label the point, and place it according to
+		<code>&lt;latitude&gt;</code> and <code>&lt;longitude&gt;</code> coordinates.
+		<a href="http://www.multimap.com/">Multimap</a> is a nice resource for finding
+		latitude/longitude coordinates for locations all over the world.
+		<p />The best way to make your XML document is to take one of the included example XML
+                documents and use it as a template to build your own.  For a basic structure that you
+                can copy/paste, check out <code>simple.xml</code>.  For a full list of functionality,
+		be sure to browse through the included <code>80days.xml</code>, which in fact contains
+		every XML tag that pflog is capable of recognizing, and an explanation of each.
+		<p />It's worth noting that every tag that can specify a display setting in
+		<code>&lt;settings&gt;</code> can be omitted and placed instead in the HTML object/embed
+		code.  This is particularly useful for those markup purists hung up on separating style
+		from substance.  Browse the source of <code>80days.htm</code> to see how this is done.
+		<h3>AND THAT'S IT!</h3>
+		<p />Really, I could have included drawn out schema definitions - maybe even a DTD - but
+		why make it any more complicated than it has to be?
+		<p />pflog - <a href="http://fawx.com/software/pflog/">http://fawx.com/software/pflog/</a>
+</body>
+</html>

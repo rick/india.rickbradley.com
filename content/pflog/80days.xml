@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+     80days.xml
+     
+     This is a more complicated XML document that demonstrates all the features of pflog.
+     If you're just starting out, you may want to look through simple.xml first.
+     
+     Follow along the comments for an explanation of various tags.
+  -->
+
+
+
+<!-- The <map> tag!  It all starts here. -->
+<map>
+
+
+
+<!-- <settings> contains formatting information for how to display the map -->
+  <settings>
+
+
+
+<!-- <mapstyle> contains color settings for land, sea, borders, and the map border
+     
+     Keep in mind that you can enter 'none' instead of any color value to make it
+     blank, such as the countrybordercolor below.
+
+     However, if you load this 80days.htm in a browser, the country borders are
+     clearly visible.  Why?  Because this particular XML settings value has been
+     overridden by embedded HTML in 80days.htm - go see its HTML source for more info.
+  -->
+    <mapstyle>
+      <countrybordercolor>none</countrybordercolor>
+      <landcolor>0x8ef39f</landcolor>
+      <seacolor>0x99d9df</seacolor>
+      <mapbordercolor>0x000000</mapbordercolor>
+    </mapstyle>
+
+
+
+<!-- <locationinfostyle> contains display settings for the info box that pops up for
+     locations.
+  -->
+    <locationinfostyle>
+      <forecolor>0x000000</forecolor>
+      <backcolor>0xffffe1</backcolor>
+<!-- <alpha> means transparency.  0 is completely transparent (invisible) and 100 is
+     completely opaque.
+  -->
+      <alpha>75</alpha>
+<!-- <dateformat> lets you specify how dates should appear inside pflog.  You can use
+     the following fields, along with characters such as commas:
+       yyyy: 4-digit year, yy: 2-digit year
+       mmmm: Full months (January, February), mmm: Abbreviated months (Jan, Feb)
+       mm: Leading-zero months (01, 02), m: months (1, 2)
+       dddd: Full days (Monday, Tuesday), dddd: Abbreviated days (Mon, Tue)
+       dd: Leading-zero days (01, 02), d: days (1, 2)
+  -->
+      <dateformat>mmmm d, yyyy</dateformat>
+<!-- <showonslide>, if set to true, will show the locationinfo box every time the
+     user slides the slider.  If false, it will only show when the user hovers
+     the mouse over the location.
+  -->
+      <showonslide>true</showonslide>
+    </locationinfostyle>
+
+
+
+<!-- <zoomsteps> tells pflog how many steps to take to zoom from one region to another.
+     The higher you set zoomsteps, the longer it will take to zoom.
+  -->
+    <zoomsteps>12</zoomsteps>
+
+
+
+<!-- <routestyle> contains display settings for drawing the routes between locations.
+     Remember, you can set <color> to 'none' here, and pflog won't draw routes.
+  -->
+    <routestyle>
+      <thickness>3</thickness>
+      <color>0x800000</color>
+      <alpha>70</alpha>
+<!-- <straight> will tell pflog to draw straight (uncurved) lines between locations -->
+      <straight>false</straight>
+    </routestyle>
+
+
+
+<!-- <locationstyle> tells pflog how to draw the markers for each location on the map.
+     Like routestyle, you can set <forecolor> and <backcolor> to 'none' and
+     location markers won't show up on the map.
+  -->
+    <locationstyle>
+      <forecolor>0x800000</forecolor>
+      <backcolor>0xff0000</backcolor>
+      <alpha>50</alpha>
+<!-- <size> is in pixels -->
+      <size>8</size>
+<!-- <shape> can be one of the following values:
+     'circle'
+     'triangle'
+     'square'
+     'star'
+  -->
+      <shape>star</shape>
+    </locationstyle>
+  </settings>
+
+
+
+<!-- <routes> contain the meat and potatoes of the xml - the lines and locations to draw! -->
+  <routes>
+
+
+
+<!-- <route> is a group of locations with lines connecting them.
+     A route has a 'focus point' - during the route, pflog zooms in and centers on this focus
+     point.  The point is designated by the <latitude>, <longitude>, and <zoom> tags below.
+  -->
+    <route>
+      <name>Eurasia</name>
+      <latitude>42N</latitude>
+      <longitude>10E</longitude>
+<!-- <zoom> is a magnification.  Entering a zoom value of 1 tells pflog to display the whole map
+     completely unmagnified.  Play with this value until you're happy with how far pflog zooms
+     in for each route.
+  -->
+      <zoom>5</zoom>
+<!-- Look, a <locationstyle> tag!  Didn't we see this tag up in the <settings>?  Yes, we did!
+     In fact, it turns out that both <route> and <location> tags can have <routestyle> and
+     <locationstyle> tags embedded inside them.  These renegade formatting tags will override
+     the global settings and apply specific formatting for just that <route> or <location>,
+     letting you customize and format willy-nilly.  Pretty clever, I think.
+  -->
+      <locationstyle>
+        <size>40</size>
+      </locationstyle>
+
+
+
+<!-- <locations> contain the meat and potatoes, or maybe just the potatoes, of the xml -
+     the locations to draw!
+  -->
+      <locations>
+
+
+
+<!-- <location> is a point on the map for pflog to mark.-->
+        <location>
+          <name>London, England</name>
+<!-- <arrivaldate> needs to be in international standard date notation: YYYY-MM-DD -->
+          <arrivaldate>1872-10-2</arrivaldate>
+<!-- Latitude and longitude values can be entered as decimal values or as degrees, minutes,
+     seconds.  For example, the value below would also be valid as 51:30 or 51:30:00.
+  -->
+          <latitude>51.500N</latitude>
+          <longitude>0.116W</longitude>
+          <note>Fogg accepts a wager for 20,000 pounds to travel around the world in 80 days.</note>
+          <url>http://en.wikipedia.org/wiki/London</url>
+<!-- Yet another overriding locationstyle tag!  Just like route settings will override map settings,
+     any locationstyle properties embedded in this tag will override route and map settings above it.
+  -->
+          <locationstyle>
+            <shape>circle</shape>
+          </locationstyle>
+        </location>
+<!-- There are a few more comments further down.
+
+     ||
+     ||
+     ||
+     \/
+  -->
+        <location>
+          <name>Suez, Egypt</name>
+          <arrivaldate>1872-10-9</arrivaldate>
+          <latitude>29.966N</latitude>
+          <longitude>32.549E</longitude>
+          <note>A detective named Fix mistakes Fogg for a bankrobber and begins to follow him.</note>
+          <url>http://en.wikipedia.org/wiki/Suez</url>
+        </location>
+      </locations>
+    </route>
+    <route>
+      <name>Asia</name>
+      <latitude>12N</latitude>
+      <longitude>92.825E</longitude>
+      <zoom>6</zoom>
+      <locationstyle>
+        <size>48</size>
+      </locationstyle>
+      <locations>
+        <location>
+          <name>Bombay, India</name>
+          <arrivaldate>1872-10-20</arrivaldate>
+          <latitude>18.974N</latitude>
+          <longitude>72.825E</longitude>
+          <note>Fogg arrives to find railway incomplete; travels by elephant.</note>
+          <url>http://en.wikipedia.org/wiki/Bombay</url>
+        </location>
+        <location>
+          <name>Calcutta, India</name>
+          <arrivaldate>1872-10-25</arrivaldate>
+          <latitude>22.569N</latitude>
+          <longitude>88.369E</longitude>
+          <note>Fogg and Passepartout rescue a young Indian woman named Aouda.</note>
+          <url>http://en.wikipedia.org/wiki/Calcutta</url>
+        </location>
+        <location>
+          <name>Singapore</name>
+          <arrivaldate>1872-10-31</arrivaldate>
+          <latitude>1.295N</latitude>
+          <longitude>103.704E</longitude>
+          <url>http://en.wikipedia.org/wiki/Singapore</url>
+        </location>
+      </locations>
+    </route>
+    <route>
+      <name>East Asia</name>
+      <latitude>29N</latitude>
+      <longitude>121E</longitude>
+      <zoom>3</zoom>
+      <locationstyle>
+        <size>24</size>
+      </locationstyle>
+      <locations>
+        <location>
+          <name>Hong Kong, China</name>
+          <arrivaldate>1872-11-6</arrivaldate>
+          <latitude>22.250N</latitude>
+          <longitude>114.166E</longitude>
+          <note>Fix drugs Passepartout in an opium den; Fogg is left behind.</note>
+          <url>http://en.wikipedia.org/wiki/Hong_Kong</url>
+        </location>
+        <location>
+          <name>Shanghai, China</name>
+          <arrivaldate>1872-11-11</arrivaldate>
+          <latitude>31.222N</latitude>
+          <longitude>121.457E</longitude>
+          <url>http://en.wikipedia.org/wiki/Shanghai</url>
+        </location>
+        <location>
+          <name>Yokohama, Japan</name>
+          <arrivaldate>1872-11-14</arrivaldate>
+          <latitude>41.083N</latitude>
+          <longitude>141.249E</longitude>
+          <note>Fogg finds Passepartout at a circus, trying to earn money to return home.</note>
+          <url>http://en.wikipedia.org/wiki/Yokohama%2C_Kanagawa</url>
+        </location>
+      </locations>
+    </route>
+    <route>
+      <name>USA</name>
+      <latitude>37.774N</latitude>
+      <longitude>97W</longitude>
+      <zoom>6</zoom>
+      <locationstyle>
+        <size>48</size>
+      </locationstyle>
+      <locations>
+<!-- This <location> tag has 'crossmap="true"' as an attribute.  This tells pflog to draw the
+     line to this location in the opposite direction, going off one edge of the map, and
+     entering back in from the other.
+  -->
+        <location crossmap="true">
+          <name>San Francisco, USA</name>
+          <arrivaldate>1872-12-3</arrivaldate>
+          <latitude>37.774N</latitude>
+          <longitude>122.420W</longitude>
+          <note>Fogg's train is ambushed by Indians.  Passepartout is kidnapped and finally rescued by Fogg.</note>
+          <url>http://en.wikipedia.org/wiki/San_Francisco</url>
+        </location>
+        <location>
+          <name>Omaha, USA</name>
+          <arrivaldate>1872-12-6</arrivaldate>
+          <latitude>41.258N</latitude>
+          <longitude>95.938W</longitude>
+          <url>http://en.wikipedia.org/wiki/Omaha</url>
+        </location>
+        <location>
+          <name>Chicago, USA</name>
+          <arrivaldate>1872-12-9</arrivaldate>
+          <latitude>41.850N</latitude>
+          <longitude>87.650W</longitude>
+          <url>http://en.wikipedia.org/wiki/Chicago</url>
+        </location>
+        <location>
+          <name>New York, USA</name>
+          <arrivaldate>1872-12-11</arrivaldate>
+          <latitude>40.797N</latitude>
+          <longitude>73.970W</longitude>
+          <note>Fogg bribes a steamer crew to take his party to Liverpool.</note>
+          <url>http://en.wikipedia.org/wiki/New_York</url>
+        </location>
+      </locations>
+    </route>
+    <route>
+      <name>World</name>
+      <latitude>0N</latitude>
+      <longitude>0W</longitude>
+      <zoom>1</zoom>
+      <locations>
+        <location>
+          <name>Liverpool, England</name>
+          <arrivaldate>1872-12-20</arrivaldate>
+          <latitude>53.416N</latitude>
+          <longitude>3.002W</longitude>
+          <note>Fogg is arrested upon reaching British soil.</note>
+          <url>http://en.wikipedia.org/wiki/Liverpool</url>
+          <locationstyle>
+            <shape>circle</shape>
+          </locationstyle>
+        </location>
+      </locations>
+    </route>
+  </routes>
+
+<!-- The </map> tag!  It all ends here. -->
+</map>

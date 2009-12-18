@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map>
+  <settings>
+    <mapstyle>
+      <countrybordercolor>0x888888</countrybordercolor>
+      <landcolor>0x8ef39f</landcolor>
+      <seacolor>0x99d9df</seacolor>
+      <mapbordercolor>0x000000</mapbordercolor>
+    </mapstyle>
+    <locationinfostyle>
+      <forecolor>0x000000</forecolor>
+      <backcolor>0xffffe1</backcolor>
+      <alpha>75</alpha>
+      <dateformat>mmmm d, yyyy</dateformat>
+      <showonslide>true</showonslide>
+    </locationinfostyle>
+    <zoomsteps>12</zoomsteps>
+    <routestyle>
+      <thickness>3</thickness>
+      <color>0x800000</color>
+      <alpha>70</alpha>
+      <straight>false</straight>
+    </routestyle>
+    <locationstyle>
+      <forecolor>0x800000</forecolor>
+      <backcolor>0xff0000</backcolor>
+      <alpha>50</alpha>
+      <size>8</size>
+      <shape>star</shape>
+    </locationstyle>
+  </settings>
+  <routes>
+    <route>
+      <name>USA</name>
+      <latitude>36:10:12.00N</latitude>
+      <longitude>86:46:48.00W</longitude>
+      <zoom>6</zoom>
+      <locations>
+        <location>
+          <name>Nashville, TN, USA</name>
+          <arrivaldate>2009-09-01</arrivaldate>
+          <latitude>36:10:12.00N</latitude>
+          <longitude>86:46:48.00W</longitude>
+          <note>We left our home in Nashville, headin' for the NYC.</note>
+        </location>
+        <location>
+          <name>Mount Sinai, NY</name>
+          <arrivaldate>2009-9-2</arrivaldate>
+          <latitude>40.946N</latitude>
+          <longitude>73.03W</longitude>
+          <note>We rested up here for a few days, getting ready to fly out.</note>
+        </location>
+        <location>
+          <name>JFK</name>
+          <arrivaldate>2009-9-6</arrivaldate>
+          <latitude>40.65N</latitude>
+          <longitude>73.78W</longitude>
+          <note>Getting our flight on.</note>
+        </location>
+      </locations>
+    </route>
+    <route>
+      <name>Germany</name>
+      <latitude>50:7:12N</latitude>
+      <longitude>8:40:48E</longitude>
+      <zoom>6</zoom>
+      <locations>
+        <location>
+          <name>Frankfort, Germany</name>
+          <arrivaldate>2009-9-7</arrivaldate>
+          <latitude>50:7:12N</latitude>
+          <longitude>8:40:48E</longitude>
+          <note>Lufthansa flight with a stopover in Frankfort.</note>
+        </location>
+      </locations>
+    </route>
+    <route>
+      <name>Arrivial in India</name>
+      <latitude>18:57:36N</latitude>
+      <longitude>72:49:12E</longitude>
+      <zoom>6</zoom>
+      <locations>
+        <location>
+          <name>Mumbai, India</name>
+          <arrivaldate>2009-9-8</arrivaldate>
+          <latitude>18:57:36N</latitude>
+          <longitude>72:49:12E</longitude>
+          <note>Arrival in Mumbai!</note>
+          <url>http://www.flickr.com/photos/rickbradley/3930070451/in/set-72157622393701396/</url>
+        </location>
+      </locations>
+    </route>
+
+    <route>
+      <name>Mumbai to Kathgodam</name>
+      <latitude>28:29:24N</latitude>
+      <longitude>77:13:12E</longitude>
+      <zoom>9</zoom>
+      <locations>
+        <location>
+          <name>Delhi, India</name>
+          <arrivaldate>2009-9-9</arrivaldate>
+          <latitude>28:29:24N</latitude>
+          <longitude>77:13:12E</longitude>
+          <note>Travel to Delhi via the Rajdhani Express train. Stay at the Majnu-ka-Tilla Tibetan colony.</note>
+        </location>
+        <location>
+          <name>Kathgodam, Uttarakhand, India</name>
+          <arrivaldate>2009-9-10</arrivaldate>
+          <latitude>29.265641N</latitude>
+          <longitude>79.545979E</longitude>
+          <note>Take the Rannikhet Express train from Delhi to Kathgodam and grab a car to head up to Almora</note>
+        </location>
+      </locations>
+    </route>
+    <route>
+      <name>Uttarakhand</name>
+      <latitude>29.599534N</latitude>
+      <longitude>79.659369E</longitude>
+      <zoom>15</zoom>
+      <locations>
+        <location>
+          <name>Kainchi, Uttarakhand, India</name>
+          <arrivaldate>2009-9-11</arrivaldate>
+          <latitude>29.536937N</latitude>
+          <longitude>79.556115E</longitude>
+          <note>Late monsoons got us stuck here behind a landslide(!) -- but Sri Baba's Ashram was incredible, not to mention the world-class musicians and darshan with the Mother.</note>
+        </location>
+        <location>
+          <name>Almora, Uttarakhand, India</name>
+          <arrivaldate>2009-9-13</arrivaldate>
+          <latitude>29.599534N</latitude>
+          <longitude>79.659369E</longitude>
+          <note>A brief stay at Rajnish and Rashmi's (Avani founders) hill-top home.</note>
+        </location>
+        <location>
+          <name>Avani -- Tripuradevi, Uttarakhand, India</name>
+          <arrivaldate>2009-9-15</arrivaldate>
+          <latitude>29.768342N</latitude>
+          <longitude>80.031944E</longitude>
+          <note>Ride up into the mountains with Rajnish for a multi-month stay at Avani.</note>
+          <url>http://www.avani-kumaon.org/</url>
+        </location>
+        <location>
+          <name>Munsyari, Uttarakhand, India</name>
+          <arrivaldate>2009-9-19</arrivaldate>
+          <latitude>30.065449N</latitude>
+          <longitude>80.24374E</longitude>
+          <note>An overnight trip up to Munsyari -- the furthest road point towards the Kumaon Himalayas.  We're REALLY close to Nepal here.</note>
+        </location>
+        <location>
+          <name>Avani -- Tripuradevi, Uttarakhand, India</name>
+          <arrivaldate>2009-9-21</arrivaldate>
+          <latitude>29.768342N</latitude>
+          <longitude>80.031944E</longitude>
+          <note>Back to Avani for more funtimes.</note>
+          <url>http://www.avani-kumaon.org/</url>
+        </location>
+        <location>
+          <name>Delhi</name>
+          <arrivaldate>2009-10-28</arrivaldate>
+          <latitude>28:29:24N</latitude>
+          <longitude>77:13:12E</longitude>
+          <note>Rick only:  headed down by bus to Almora, then taxi to Kathgodam, then via Rannikhet Express to Delhi.  Another night in Majnu-ka-Tilla.</note>
+        </location>
+      </locations>
+    </route>
+    <route>
+      <name>Goa/Trivandrum/Kanyakumari trip.</name>
+      <latitude>15.251683N</latitude>
+      <longitude>73.970489E</longitude>
+      <zoom>15</zoom>
+      <locations>
+        <location>
+          <name>Goa beaches</name>
+          <arrivaldate>2009-10-29</arrivaldate>
+          <latitude>15.524439N</latitude>
+          <longitude>73.769989E</longitude>
+          <note>Rick only: flew from Delhi to Goa to hang out with Arafat and Ritesh in Calangute, Baga, Anjuna, and old Goa.</note>
+        </location>
+        <location>
+          <name>Margao, Goa</name>
+          <arrivaldate>2009-11-1</arrivaldate>
+          <latitude>15.251683N</latitude>
+          <longitude>73.970489E</longitude>
+          <note>Rick only: over-priced and infested hotel in the unremarkable town of Margao (most recently famous for a terrorist bombing).</note>
+        </location>
+      </locations>
+    </route>
+    <route>
+      <name>Trivandrum/Kanyakumari</name>
+      <latitude>8.498813N</latitude>
+      <longitude>76.928558E</longitude>
+      <zoom>15</zoom>
+      <locations>
+        <location>
+          <name>Trivandrum</name>
+          <arrivaldate>2009-11-3</arrivaldate>
+          <latitude>8.498813N</latitude>
+          <longitude>76.928558E</longitude>
+          <note>Rick only: took the Trivandrum Rajdhani Express train down the coast overnight to Trivandrum</note>
+        </location>
+        <location>
+          <name>Kanyakumari</name>
+          <arrivaldate>2009-11-3</arrivaldate>
+          <latitude>8.078753N</latitude>
+          <longitude>77.550759E</longitude>
+          <note>Rick only: took the fascinating local buses from Trivandrum to Nagercoil to Kanyakumari and stayed in the Vivekananda ashram, caught sunrise at the beach at the southmost tip of India -- a point where three seas come together.</note>
+        </location>
+        <location>
+          <name>Kovalum Beach</name>
+          <arrivaldate>2009-11-4</arrivaldate>
+          <latitude>8.498813N</latitude>
+          <longitude>76.928558E</longitude>
+          <note>Rick only:  back on the bus up through Nagercoil to Trivandrum and a quick auto-rickshaw out to Kovalum Beach for a relaxing stay.</note>
+        </location>
+      </locations>
+    </route>
+    <route>
+      <name>Delhi/Avani/out-of-Avani</name>
+      <latitude>28:29:24N</latitude>
+      <longitude>77:13:12E</longitude>
+      <zoom>11</zoom>
+      <locations>
+        <location>
+          <name>Delhi</name>
+          <arrivaldate>2009-11-5</arrivaldate>
+          <latitude>28:29:24N</latitude>
+          <longitude>77:13:12E</longitude>
+          <note>Rick and Ali both:  met up in Delhi for a 10-day stint at the Dastkhar Textile Exhibition on behalf of Avani.  Rick flew up, Ali took a jeep and train down to Delhi.  Stayed for a night at the "rustic" Tilonia guest house and then back to the ever-pleasant Majnu-ka-Tilla Tibetan colony.</note>
+        </location>
+        <location>
+          <name>Avani -- Tripuradevi, Uttarakhand, India</name>
+          <arrivaldate>2009-11-16</arrivaldate>
+          <latitude>29.768342N</latitude>
+          <longitude>80.031944E</longitude>
+          <note>Back to Avani via hellish 20-hour journey.  We were sick for about 12 days after that.</note>
+          <url>http://www.avani-kumaon.org/</url>
+        </location>
+        <location>
+          <name>Digoli Village</name>
+          <arrivaldate>2009-11-27</arrivaldate>
+          <latitude>29.772776N</latitude>
+          <longitude>80.045943E</longitude>
+          <note>We stayed overnight in Digoli (you can only get there by hiking in for a few hours) for a real Kumaon Hindu wedding.</note>
+        </location>
+        <location>
+          <name>Avani -- Tripuradevi, Uttarakhand, India</name>
+          <arrivaldate>2009-11-28</arrivaldate>
+          <latitude>29.768342N</latitude>
+          <longitude>80.031944E</longitude>
+          <note>Back to Avani one last time.</note>
+          <url>http://www.avani-kumaon.org/</url>
+        </location>
+        <location>
+          <name>Jageshwar, Uttarakhand</name>
+          <arrivaldate>2009-12-5</arrivaldate>
+          <latitude>29.65N</latitude>
+          <longitude>79.58E</longitude>
+          <note>We checked out the crazy Jageshwar temple scene on our way out of Uttarakhand...</note>
+          <url>http://en.wikipedia.org/wiki/Jageshwar</url>
+        </location>
+        <location>
+          <name>Delhi</name>
+          <arrivaldate>2009-12-6</arrivaldate>
+          <latitude>28:29:24N</latitude>
+          <longitude>77:13:12E</longitude>
+          <note>And one more trip down to Kathgodam and overnight train to Delhi, with another (hopefully the last in a long while) coughing stay in polluted Delhi, at least tempered by the tranquility of Majnu-ka-Tilla.</note>
+        </location>
+      </locations>
+    </route>
+    <route>
+      <name>Northwest India</name>
+      <latitude>28:29:24N</latitude>
+      <longitude>77:13:12E</longitude>
+      <zoom>12</zoom>
+      <locations>
+        <location>
+          <name>Dharamsala / Mcleod Ganj / Dharamkot (Himachal Pradesh)</name>
+          <arrivaldate>2009-12-8</arrivaldate>
+          <latitude>32.220271N</latitude>
+          <longitude>76.319525E</longitude>
+          <note>A brutal bus ride (mostly due to the driver) up to the home of the Dalai Lama and the Tibetan government in exile.  A beautiful place, if a bit touristy.  Go when it's cold :-)</note>
+        </location>
+        <location>
+          <name>Kangra, Himachal Pradesh -> Pathankot, Punjab</name>
+          <arrivaldate>2009-12-12</arrivaldate>
+          <latitude>32.262994N</latitude>
+          <longitude>75.650389E</longitude>
+          <note>A quick local bus to Kangra and then an awesome-ass super-packed-guys-hanging-off-the-side and-grandmas-elbowing-teenagers narrow gauge train to Pathankot.</note>
+        </location>
+        <location>
+          <name>Bikaner, Rajasthan</name>
+          <arrivaldate>2009-12-13</arrivaldate>
+          <latitude>28.017661N</latitude>
+          <longitude>73.32304E</longitude>
+          <note>Another (regular this time) train down to Bikaner, a really cool Rajasthani town with a great Old City.</note>
+        </location>
+        <location>
+          <name>Ahmedabad, Gujarat</name>
+          <arrivaldate>2009-12-15</arrivaldate>
+          <latitude>23.038898N</latitude>
+          <longitude>72.574253E</longitude>
+          <note>Ahmedabad has a lot of sites (including the awesome Calico Museum), but it rivals Delhi for sheer polluted air, noise, and insanely dangerous traffic.  Fun, but glad to only stay a couple of days.</note>
+        </location>
+        <location>
+          <name>Bhuj, Kutch, Gujarat</name>
+          <arrivaldate>2009-12-17</arrivaldate>
+          <latitude>23.251241N</latitude>
+          <longitude>69.665651E</longitude>
+          <note>Yet another railway hop brings us through the desert into much quieter hot-in-the-day-and-cold-at-night Bhuj.  This is a true textile center and we'll probably spend about a month here.</note>
+        </location>
+      </locations>
+    </route>
+  </routes>
+</map>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+     simple.xml
+     
+     This is a basic pflog XML map that you can use as a template to build
+     your own routes.  If you're craving more advanced features, you may
+     want to check out 80days.xml.
+     
+     Follow along the comments for an explanation of various tags.
+  -->
+
+
+<map>
+  <routes>
+<!-- <route> is a group of locations with lines connecting them.
+     A route has a 'focus point' - during the route, pflog zooms in and centers on this focus
+     point.  The point is designated by the <latitude>, <longitude>, and <zoom> tags below.
+
+     You can have more than one route in a map.
+  -->
+    <route>
+      <name>USA</name>
+      <latitude>37.774N</latitude>
+      <longitude>97W</longitude>
+      <zoom>6</zoom>
+      <locations>
+<!-- <location> is a point on the map that pflog will draw.
+     
+     You can have more than one location in a route.
+  -->
+        <location>
+          <name>San Francisco, USA</name>
+          <arrivaldate>2005-5-22</arrivaldate>
+          <latitude>37.774N</latitude>
+          <longitude>122.420W</longitude>
+          <note>I live here.</note>
+          <url>http://en.wikipedia.org/wiki/San_Francisco</url>
+        </location>
+        <location>
+          <name>Omaha, USA</name>
+          <arrivaldate>2005-5-23</arrivaldate>
+          <latitude>41.258N</latitude>
+          <longitude>95.938W</longitude>
+          <note>I saw some banks.</note>
+          <url>http://en.wikipedia.org/wiki/Omaha</url>
+        </location>
+        <location>
+          <name>Chicago, USA</name>
+          <arrivaldate>2005-5-25</arrivaldate>
+          <latitude>41.850N</latitude>
+          <longitude>87.650W</longitude>
+          <note>Nice hotdogs.</note>
+          <url>http://en.wikipedia.org/wiki/Chicago</url>
+        </location>
+        <location>
+          <name>New York, USA</name>
+          <arrivaldate>2005-5-27</arrivaldate>
+          <latitude>40.797N</latitude>
+          <longitude>73.970W</longitude>
+          <note>Nice pizza.</note>
+          <url>http://en.wikipedia.org/wiki/New_York</url>
+        </location>
+      </locations>
+    </route>
+  </routes>
+</map>

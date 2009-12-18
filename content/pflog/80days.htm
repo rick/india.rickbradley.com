@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- 
+     80days.htm
+     
+     This is a more complicated HTML document that demonstrates all the HTML formatting options of pflog.
+     If you're just starting out, you may want to look through simple.htm first.
+     
+     Follow along the comments for an explanation of various tags.
+  -->
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>pflog</title>
+<style type="text/css">
+body { font: 12px/19px "lucida grande", "lucida sans unicode", verdana, sans-serif; background: #fff;}
+</style>
+</head>
+<body bgcolor="#ffffff">
+
+<p />Hi!  View my source for all sorts of information about customizing pflog using HTML.
+
+<!--
+
+     FLASHVARS
+
+     Below is a field named "FlashVars" that you can use to communicate with pflog.  For browser compatibility,
+     be sure to set this value in both the <param> tag and the FlashVars attribute of the <embed> tag.  There
+     are three values you can specify to pflog through FlashVars, formatted like the following:
+     name1=value1&name2=value2&name3=value3.  These are the three values:
+
+     xmlurl: the URL of the XML document.  This is required.
+     gotodate: tells pflog to instantly zoom to this date on the timeline when pflog is first loaded.
+     settings: specify XML map settings to pflog, explained further below.
+
+     SETTINGS
+
+     Various settings xml tags are listed in the 80days.xml document, and can be used here as well, but in a
+     different format.  Instead of tags, use a period to separate nested tags, and = to assign.  So the XML
+
+     <mapstyle>
+       <landcolor>0xffffff</landcolor>
+     </mapstyle>
+
+     would be represented as mapstyle.landcolor=0xffffff
+
+     Multiple assignments are separated with SEMICOLONS, not the ampersand, and formatted like the following:
+     name1=value1;name2=value2;name3=value3;
+
+     If a different value for the same setting exists in the XML document and the FlashVars, the FlashVars
+     setting will override the XML setting.
+
+     PUTTING IT ALL TOGETHER
+
+     Let's construct a string that tells pflog to load 80days.xml, to slide immediately to a date of
+     November 6, 1872, and to display jet black seas and ivory land:
+
+     xmlurl=80days.xml&gotodate=1872-11-6&settings=mapstyle.seacolor=0x000000;mapstyle.landcolor=0xffffff
+
+  -->
+
+
+
+<p /><object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,0,0" width="500" height="250" id="pflog" align="middle">
+<param name="allowScriptAccess" value="sameDomain" />
+<param name="movie" value="pflog.swf" />
+<param name="quality" value="high" />
+<param name="bgcolor" value="#ffffff" />
+<param name="FlashVars" value="xmlurl=80days.xml&gotodate=1872-11-6&settings=mapstyle.countrybordercolor=0x7ad189;routestyle.alpha=30" />
+<embed src="pflog.swf" quality="high" bgcolor="#ffffff" FlashVars="xmlurl=80days.xml&gotodate=1872-11-6&settings=mapstyle.countrybordercolor=0x7ad189;routestyle.alpha=30" width="500" height="250" name="pflog" align="middle" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />
+</object>
+
+</body>
+</html>

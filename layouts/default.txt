@@ -51,6 +51,15 @@ filter:    haml
           %li
             %a{:href => 'http://www.rickbradley.com/'} visit rickbradley.com
         %hr
+        %center
+          %object#pflog{ :height => "266", :classid => "clsid:d27cdb6e-ae6d-11cf-96b8-444553540000", :codebase => "http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,0,0", :align => "middle", :width => "500" }
+            %param{ :name => "allowScriptAccess", :value => "sameDomain" }
+            %param{ :name => "movie", :value => "/pflog/pflog.swf" }
+            %param{ :name => "quality", :value => "high" }
+            %param{ :name => "bgcolor", :value => "#ffffff" }
+            %param{ :name => "FlashVars", :value => "xmlurl=/pflog/india.xml" }
+            %embed{ :name => "pflog", :bgcolor => "#ffffff", :src => "/pflog/pflog.swf", :type => "application/x-shockwave-flash", :pluginspage => "http://www.macromedia.com/go/getflashplayer", :FlashVars => "xmlurl=/pflog/india.xml", :allowScriptAccess => "sameDomain", :height => "266", :quality => "high", :align => "middle", :width => "500" }
+        %hr
         = @content
         - unless @page.name =~ /index$/
           #disqus_thread
