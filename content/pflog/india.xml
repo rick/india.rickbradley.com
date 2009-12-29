@@ -303,12 +303,41 @@
           <longitude>72.574253E</longitude>
           <note>Ahmedabad has a lot of sites (including the awesome Calico Museum), but it rivals Delhi for sheer polluted air, noise, and insanely dangerous traffic.  Fun, but glad to only stay a couple of days.</note>
         </location>
+      </locations>
+    </route>
+    <route>
+      <name>Gujarat</name>
+      <latitude>23.251241N</latitude>
+      <longitude>69.665651E</longitude>
+      <zoom>12</zoom>
+      <locations>
         <location>
           <name>Bhuj, Kutch, Gujarat</name>
           <arrivaldate>2009-12-17</arrivaldate>
           <latitude>23.251241N</latitude>
           <longitude>69.665651E</longitude>
-          <note>Yet another railway hop brings us through the desert into much quieter hot-in-the-day-and-cold-at-night Bhuj.  This is a true textile center and we'll probably spend about a month here.</note>
+          <note>Yet another railway hop brings us through the desert into much quieter hot-in-the-day-and-cold-at-night Bhuj.  This is a true textile center and we'll probably spend about a month in this area.</note>
+        </location>
+        <location>
+          <name>Nirona, Kutch, Gujarat</name>
+          <arrivaldate>2009-12-26</arrivaldate>
+          <latitude>23.607009N</latitude>
+          <longitude>69.491901E</longitude>
+          <note>Neat little desert village, with a great "Rogan" (castor-gum) painting artist family.  The plan was to stop here, catch a bus to Than, and check out the monastery up there.  The bus broke down on the way to Nirona and we ended up staying with an incredibly nice family in an even smaller village.</note>
+        </location>
+        <location>
+          <name>Than, Kutch, Gujarat</name>
+          <arrivaldate>2009-12-27</arrivaldate>
+          <latitude>23.607009N</latitude>
+          <longitude>69.491901E</longitude>
+          <note>Than is awesome.  The monastery is one of the handful of Christopher Alexander "Timeless Way of Building" Quality Without A Name places.  It's also exceptional in that the only bus from Than to Bhuj was also the only thing in India we've seen be *early*.  We were not early.</note>
+        </location>
+        <location>
+          <name>Kukama, Kutch, Gujarat</name>
+          <arrivaldate>2009-12-28</arrivaldate>
+          <latitude>23.216969N</latitude>
+          <longitude>69.778233E</longitude>
+          <note>Home of the Khamir artists' center, right down the road a few km from some of the most amazing (10th generation) block printers on the planet.</note>
         </location>
       </locations>
     </route>
