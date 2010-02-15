@@ -339,6 +339,77 @@
           <longitude>69.778233E</longitude>
           <note>Home of the Khamir artists' center, right down the road a few km from some of the most amazing (10th generation) block printers on the planet.</note>
         </location>
+        <location>
+          <name>Bada village, Kutch, Gujarat</name>
+          <arrivaldate>2010-01-06</arrivaldate>
+          <latitude>22.904599N</latitude>
+          <longitude>69.131012E</longitude>
+          <note>(Rick only) 10-day Vipassana meditation retreat at Dhamma Sindu (see http://www.dhamma.org/ for more info)</note>
+        </location>
+        <location>
+          <name>Dhamadkha, Kutch, Gujarat</name>
+          <arrivaldate>2010-01-06</arrivaldate>
+          <latitude>23.255815N</latitude>
+          <longitude>70.306549E</longitude>
+          <note>(Ali only) Visiting and working with Rauf Khatri and other Ajrak printers in this block-printing center.</note>
+        </location>
+        <location>
+          <name>Mandvi, Kutch, Gujarat</name>
+          <arrivaldate>2010-01-17</arrivaldate>
+          <latitude>22.823614N</latitude>
+          <longitude>69.30954E</longitude>
+          <note>We both met up on the beautiful beach town of Mandvi for some rest and relaxation.</note>
+        </location>
+        <location>
+          <name>Bhuj, Kutch, Gujarat</name>
+          <arrivaldate>2010-01-21</arrivaldate>
+          <latitude>23.251241N</latitude>
+          <longitude>69.665651E</longitude>
+          <note>A quick stayover back in our Kutch base of Bhuj.</note>
+        </location>
+      </locations>
+    </route>
+    <route>
+      <name>South India</name>
+      <latitude>12.948174N</latitude>
+      <longitude>77.682495E</longitude>
+      <zoom>8</zoom>
+      <locations>
+        <location>
+          <name>Bangalore, Karnataka</name>
+          <arrivaldate>2010-01-23</arrivaldate>
+          <latitude>12.948174N</latitude>
+          <longitude>77.682495E</longitude>
+          <note>A quick flight to Bangalore (by way of Mumbai) where we got to spend some time exploring the city with our friends Bart and Laura.</note>
+        </location>
+        <location>
+          <name>Auroville, Tamil Nadu &amp; Pondicherry</name>
+          <arrivaldate>2010-01-28</arrivaldate>
+          <latitude>11.71392N</latitude>
+          <longitude>79.857788E</longitude>
+          <note>We drove down with Bart and Laura and hung out in the hippiest of international communes, where we also visited Jesus, a master indigo dyer.</note>
+        </location>
+        <location>
+          <name>Madurai, Tamil Nadu</name>
+          <arrivaldate>2010-02-02</arrivaldate>
+          <latitude>9.890213N</latitude>
+          <longitude>78.121948E</longitude>
+          <note>Bustling Tamil city with a HUGE Hindu temple in its midst.  We hung out here for a bit, waiting for our next leap.</note>
+        </location>
+        <location>
+          <name>Ernakulam / Fort Cochin, Kerala</name>
+          <arrivaldate>2010-02-09</arrivaldate>
+          <latitude>10.030882N</latitude>
+          <longitude>76.265259E</longitude>
+          <note>Just a couple of days in this nice but touristy Keralan coastal town.</note>
+        </location>
+        <location>
+          <name>Cherai Beach, Vypin Island, Kerala</name>
+          <arrivaldate>2010-02-11</arrivaldate>
+          <latitude>10.143526N</latitude>
+          <longitude>76.17799E</longitude>
+          <note>We rented a small house (for ~$12 a night(!)) 200 feet from the beach, relaxed, reflected, swam with dolphin(s)!</note>
+        </location>
       </locations>
     </route>
   </routes>
