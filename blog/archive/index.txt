@@ -1,0 +1,12 @@
+<div class='post-list section'>
+  <h2 class='recent'>2009</h2>
+  <div class='group'>
+    <h3 class='month'>JULY<STRONG>09</STRONG></h3>
+    <div class='title-summary'>
+      <h4 class='entry-title'>
+        <a href='/blog/2009/07/09/testing-1-2-3.html'>Testing-1-2-3</a>
+      </h4>
+      <p class='entry-summary'></p>
+    </div>
+  </div>
+</div>

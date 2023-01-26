@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+ 
+  <title>Our Trip To India</title>
+  <subtitle></subtitle>
+  <link href="http://india.rickbradley.com//feed/" rel="self" />
+  <link href="http://india.rickbradley.com/" />
+  <updated>2010-02-15T08:56:55+05:30</updated>
+  <author>
+    <name>Rick Bradley and Alesandra Bellos</name>
+    <email>rick@rickbradley.com</email>
+  </author>
+  <id>http://india.rickbradley.com/</id>
+  
+</feed>
